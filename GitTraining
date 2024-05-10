@@ -1,0 +1,36 @@
+#include <iostream>
+
+int main() {
+    char op;
+    double num1, num2, result;
+
+    std::cin >> op;
+
+    std::cin >> num1 >> num2;
+
+    switch(op) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if (num2 != 0) {
+                result = num1 / num2;
+            } else {
+                std::cout << "Error: division by 0" << std::endl;
+                return 1;
+            }
+            break;
+        default:
+            std::cout << "Error: incorrect operation" << std::endl;
+            return 1;
+    }
+    std::cout << result << std::endl;
+
+    return 0;
+}
