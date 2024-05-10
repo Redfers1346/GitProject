@@ -3,9 +3,9 @@
 int main() {
     char op;
     double num1, num2, result;
-
+    std::cout << "add an operation + - * :" << std::endl;
     std::cin >> op;
-
+    std::cout << "add both numbers" << std::endl;
     std::cin >> num1 >> num2;
 
     switch(op) {
